@@ -1,0 +1,21 @@
+{
+  "name": "javasript",
+  "version": "1.0.0",
+  "description": " a node js tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "learning",
+    "node",
+    "js"
+  ],
+  "author": "code step bu step",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "simple-node-logger": "^21.8.12"
+  }
+}
