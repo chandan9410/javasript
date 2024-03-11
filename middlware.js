@@ -1,10 +1,13 @@
+// middleware  is  function  that will have all the access for requesting an object.
 const express = require('express');
 const app = express();
 const reqFilter = (req, resp, next) => {
     if (!req.query.age) {
+        console.log("working .....")
         resp.send("Please provide your age")
+
     }
-    else if (req.query.age<18) {
+    else if (req.query.age < 18) {
         resp.send("You are under aged")
     }
     else {
