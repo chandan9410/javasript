@@ -15,11 +15,13 @@
   "author": "code step bu step",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
     "colors": "^1.4.0",
     "ejs": "^3.1.9",
     "express": "^4.18.3",
     "mongodb": "^6.4.0",
     "nodemon": "^3.1.0",
+    "react-redux": "^9.1.2",
     "simple-node-logger": "^21.8.12"
   }
 }
