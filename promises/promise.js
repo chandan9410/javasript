@@ -38,9 +38,25 @@ promiseFour
       console.log(username);
    }).catch(function (error) {
       console.log(error);
-   }).finally(()=>{
+   }).finally(() => {
       console.log("the promise is either resolved and rejected");
    })
 
+const promiseFive = new Promise(function (resolve, reject) {
+   setTimeout(function () {
+      let error = true
+      if (!error) {
+         resolve({ username: "javascript", password: "123" })
+      } else {
+         reject('ERROR: JS went wrong')
+      }
+   }, 1000)
+});
 
- //  async and await wailt  till the task is  completed 
+//  async and await wailt  till the task is  completed 
+//  async does not handle error directly
+async function consumePromisefive() {
+   // this is wrong way as promise is object  : const resp = await promiseFive();
+   const resp = await promiseFive;
+
+}
