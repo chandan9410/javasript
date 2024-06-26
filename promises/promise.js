@@ -1,7 +1,7 @@
-//  we get directly promise as objects 
-//the Promise object represents the eventual completion (or failure) 
+//  we get directly promise as objects
+//the Promise object represents the eventual completion (or failure)
 // of an asynchronous operation(independent to other processes) and its resulting value.
-// * Promises provide a way to handle asynchronous operations in a more manageable 
+// * Promises provide a way to handle asynchronous operations in a more manageable
 //and readable way compared to traditional callback-based approaches.
 // const promiseone = new Promise(function (resolve, reject) {
 //    console.log("async task  is completed");
@@ -53,7 +53,7 @@
 //    }, 1000)
 // });
 
-// //  async and await wailt  till the task is  completed 
+// //  async and await wailt  till the task is  completed
 // //  async does not handle error directly
 // async function consumePromisefive() {
 //    // this is wrong way as promise is object  : const resp = await promiseFive();
@@ -67,16 +67,21 @@
 //    }
 // }
 
-async function getAllUsers() {
-   try {
-      //  const response =  fetch('https://jsonplaceholder.typicode.com/users') 
-      // fetch also take time 
-      const response = await fetch('https://jsonplaceholder.typicode.com/users')
-      const data = await response.json()
-      console.log(data);
-   } catch (error) {
-      console.log("E: ", error);
-   }
-}
 
-getAllUsers()
+//  TRY CATCH METHOD
+// async function getAllUsers() {
+//    try {
+//       //  const response =  fetch('https://jsonplaceholder.typicode.com/users')
+//       // fetch also take time
+//       const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//       const data = await response.json()
+//       console.log(data);
+//    } catch (error) {
+//       console.log("E: ", error);
+//    }
+// }
+
+// getAllUsers()
+
+// .THEN METHOD
+
