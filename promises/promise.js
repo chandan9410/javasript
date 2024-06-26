@@ -19,13 +19,28 @@
 // })
 
 ////  .then lagake values and .catch laga ke  values (if error comes )
-const promisefour = new Promise(function (resolve, reject) {
-   console.log("cheking");
-   let error = true;
-   if (!error) {
-      resolve({ user: "chandan", id: 13 });
-   }
-   else {
-      console.log("some thing is wrong");
-   }
-},1000)
+const promiseFour = new Promise(function (resolve, reject) {
+   setTimeout(function () {
+      let error = true
+      if (!error) {
+         resolve({ username: "hitesh", password: "123" })
+      } else {
+         reject('ERROR: Something went wrong')
+      }
+   }, 1000)
+})
+
+promiseFour
+   .then((user) => {
+      console.log(user);
+      return user.username
+   }).then((username) => {
+      console.log(username);
+   }).catch(function (error) {
+      console.log(error);
+   }).finally(()=>{
+      console.log("the promise is either resolved and rejected");
+   })
+
+
+ //  async and await wailt  till the task is  completed 
