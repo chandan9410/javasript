@@ -84,4 +84,12 @@
 // getAllUsers()
 
 // .THEN METHOD
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((resp) => {
+    return resp.json;
 
+  }).then((data) => {
+    console.log(data);
+  }).catch((error) => {
+    console.log(error);
+  });
