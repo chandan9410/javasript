@@ -1,19 +1,64 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <script>
-  const requesturl = 'https://api.github.com/users/hiteshchoudhary';
-  // XMLHttpRequest (XHR) objects are used to interact with servers.
-  // You can retrieve data from a URL without having to do a full page refresh. 
-  //This enables a Web page 
-  //to update just part of a page without disrupting what the user is doing.
-  // Constructor
-  //  XMLHttpRequest()   : The constructor initializes an XMLHttpRequest.
-  const xhr = new  XMLHttpRequest();
+    const requesturl = 'https://www.linkedin.com/in/chandan-koranga-98456a209/';
+    // XMLHttpRequest (XHR) objects are used to interact with servers.
+    // You can retrieve data from a URL without having to do a full page refresh. 
+    //This enables a Web page 
+    //to update just part of a page without disrupting what the user is doing.
+    // Constructor
+    //  XMLHttpRequest()   : The constructor initializes an XMLHttpRequest.
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl);
+    // The readyState property holds the status of the XMLHttpRequest. Here are the possible values:
+    // 0 (UNSENT): The request has not been sent yet.
+    // 1 (OPENED): The request has been opened.
+    // 2 (HEADERS_RECEIVED): The request has been sent, and the headers and status are available.
+    // 3 (LOADING): The response is being received (the responseText property has partial data).
+    // 4 (DONE): The request is complete, and the response is fully received.
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+      }
+    }
+    xhr.send();
   </script>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+</body>
+<script>
+  const requestUrl = 'https://github.com/chandan9410'
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', requestUrl)
+  xhr.onreadystatechange = function () {
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+      const data = JSON.parse(this.responseText)
+      console.log(typeof data);
+      console.log(data.followers);
+
+    }
+  }
+  xhr.send();
+</script>
+
 </html>
